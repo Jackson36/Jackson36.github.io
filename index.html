@@ -1,104 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/Person" data-beasties-container>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jackson Moses | Data Engineer</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    nav {
-      background: #1a252f;
-      text-align: center;
-      padding: 0.5rem;
-    }
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-    }
-    h2 {
-      border-bottom: 2px solid #2c3e50;
-      padding-bottom: 0.5rem;
-    }
-    .project {
-      background: white;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      border-left: 5px solid #2c3e50;
-    }
-    img {
-      max-width: 100%;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      margin-top: 10px;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #ddd;
-      margin-top: 2rem;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="robots" content="all">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jackson Moses | Data Engineer Portfolio</title>
+  <meta name="description" content="Jackson Moses - Data Engineer specializing in ETL, Scrapy, and real-time data pipelines deployed on cloud infrastructure.">
+  <meta name="keywords" content="Jackson Moses, Data Engineer, Scrapy, Python, AWS, Airflow, Portfolio">
+  <meta name="author" content="Jackson Moses">
+  
+  <!-- Social / SEO Metadata -->
+  <meta property="og:title" content="Jackson Moses | Data Engineer Portfolio">
+  <meta property="og:description" content="Portfolio of Jackson Moses – a Data Engineer with expertise in scalable data pipelines and automation using Python, Scrapy, AWS EC2, and Airflow.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jacksonmoses.github.io/">
+  <meta property="og:image" content="https://jacksonmoses.github.io/assets/images/banner.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jackson Moses | Data Engineer Portfolio">
+  <meta name="twitter:description" content="Explore the portfolio of Jackson Moses – Scrapy, Airflow, EC2, ETL, and scalable data pipelines.">
+  <meta name="twitter:image" content="https://jacksonmoses.github.io/assets/images/banner.png">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<header>
-  <h1>Jackson Moses</h1>
-  <p>Data Engineer | Python, Scrapy, ETL, APIs</p>
-</header>
-
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About Me</a>
-</nav>
-
-<section>
-  <h2>Scrapy Projects</h2>
-
-  <div class="project">
-    <h3>🕷️ Ecommerce Price Tracker</h3>
-    <p>Built a Scrapy spider to monitor price changes across Flipkart and Amazon, storing results in PostgreSQL and sending daily email alerts.</p>
+  <div id="loader">
+    <!-- Simple animated loader -->
+    <div class="splash">
+      <div class="splash-circle circle-1">
+        <div class="circle-animation"></div>
+      </div>
+      <div class="splash-circle circle-2">
+        <div class="circle-animation"></div>
+      </div>
+    </div>
+    <div class="loader-section" id="section-left"></div>
+    <div class="loader-section" id="section-right"></div>
   </div>
 
-  <div class="project">
-    <h3>📈 Real Estate Data Crawler</h3>
-    <p>Crawled housing listings from 10+ real estate portals, cleaned and transformed the data into CSV for market analysis.</p>
-  </div>
+  <main>
+    <header>
+      <h1>Jackson Moses</h1>
+      <p>Data Engineer | Scrapy • AWS EC2 • Airflow • ETL • Automation</p>
+    </header>
 
-  <div class="project">
-    <h3>🌐 News Aggregator</h3>
-    <p>Aggregated news headlines from multiple websites using Scrapy and published to a dashboard using Streamlit.</p>
-  </div>
+    <section>
+      <h2>About Me</h2>
+      <p>I’m a Data Engineer focused on building robust, scalable, and automated data solutions to solve complex business problems. My expertise spans real-time analytics, large-scale data processing, and integrating modern data technologies into enterprise environments.</p>
+      <p>I believe that <strong>words and data</strong> are the two most powerful tools to change the world.</p>
+      <ul>
+        <li>Web scraping using Scrapy and Python</li>
+        <li>ETL pipeline development and automation</li>
+        <li>Data orchestration with Apache Airflow</li>
+        <li>Cloud deployment with AWS EC2 & GCP</li>
+        <li>Data storage using PostgreSQL, S3, and BigQuery</li>
+      </ul>
+    </section>
 
-  <div class="project">
-    <h3>📦 End-to-End Data Pipeline</h3>
-    <p>This project demonstrates an automated data pipeline using Apache Airflow to orchestrate data flow from Kaggle to Metabase dashboards. Key components include GCP Storage, dbt for transformation, and Soda for data quality checks at every stage.</p>
-    <img src="online_retail_data_pipeline.png" alt="Data pipeline diagram">
-  </div>
+    <section>
+      <h2>Highlighted Projects</h2>
 
-</section>
+      <div class="project">
+        <h3>🔁 Scalable Scrapy Crawler on AWS EC2</h3>
+        <p>Deployed a production-grade Scrapy project on AWS EC2 to perform large-scale web crawling with automated logging and scheduling. Results are saved to S3/PostgreSQL for downstream processing.</p>
+        <img src="scrapy_ec2_demo.gif" alt="Scrapy EC2 demo">
+      </div>
 
-<footer>
-  <p>&copy; 2025 Jackson Moses</p>
-</footer>
+      <div class="project">
+        <h3>📦 End-to-End Data Pipeline</h3>
+        <p>Built an automated data pipeline using Airflow, GCP Storage, dbt, and Soda for quality checks. Final dashboards deployed via Metabase.</p>
+        <img src="online_retail_data_pipeline.png" alt="Data pipeline diagram">
+      </div>
 
+      <div class="project">
+        <h3>📰 News Aggregator</h3>
+        <p>Used Scrapy to gather headlines from multiple sources and published them to a dynamic dashboard using Streamlit.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jackson Moses</p>
+  </footer>
 </body>
 </html>
