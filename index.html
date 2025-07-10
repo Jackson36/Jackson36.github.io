@@ -1,268 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jackson Moses | Data Engineer</title>
-  <style>
-    :root {
-      --dark-bg: rgba(26, 37, 47, 0.95);
-      --primary: #2c3e50;
-      --white: #fff;
-    }
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    html {
-      scroll-behavior: smooth;
-    }
+  <title>Jackson Moses - Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      color: var(--white);
-      background-color: #111;
-    }
+  <!-- Favicons -->
+  <link href="assets/img/jm-logo.png" rel="icon">
+  <link href="assets/img/jm-logo.png" rel="apple-touch-icon">
 
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: var(--dark-bg);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2.5rem;
-      z-index: 1000;
-    }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    .navbar a.logo {
-      font-size: 1.5rem;
-      color: var(--white);
-      text-decoration: none;
-      font-weight: bold;
-    }
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-    }
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 
-    .nav-links a {
-      color: var(--white);
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .nav-links a:hover {
-      text-decoration: underline;
-    }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .hamburger div {
-      width: 25px;
-      height: 3px;
-      background-color: white;
-      margin: 4px;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: var(--dark-bg);
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        text-align: right;
-        padding: 1rem;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-    }
-
-    .hero {
-      height: 100vh;
-      background: url('background.avif') no-repeat center center/cover;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding-top: 4rem;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-
-    .typing {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-      min-height: 2rem;
-      font-weight: bold;
-    }
-
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 5rem 2rem 3rem;
-      background-color: rgba(255, 255, 255, 0.95);
-      color: #333;
-      border-radius: 10px;
-    }
-
-    h2 {
-      border-bottom: 2px solid var(--primary);
-      padding-bottom: 0.5rem;
-    }
-
-    .project {
-      background: white;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      border-left: 5px solid var(--primary);
-      border-radius: 8px;
-    }
-
-    img {
-      max-width: 100%;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      margin-top: 10px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: var(--dark-bg);
-      color: #eee;
-    }
-  </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<div class="navbar">
-  <a href="#home" class="logo">Jackson Moses</a>
-  <div class="nav-links" id="navLinks">
-    <a href="#about">About Me</a>
-    <a href="#expertise">Expertise</a>
-    <a href="#projects">Projects</a>
-  </div>
-  <div class="hamburger" onclick="toggleMenu()">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
-<!-- Hero Section -->
-<div class="hero" id="home">
-  <h1>Jackson Moses</h1>
-  <div class="typing" id="typewriter"></div>
-</div>
 
-<!-- About Me Section -->
-<section id="about">
-  <h2>About Me</h2>
-  <p>I’m a Data Engineer focused on building robust, scalable, and automated data solutions to solve complex business problems. My expertise spans real-time analytics, large-scale data processing, and integrating modern data technologies into enterprise environments.</p>
-  <p>I believe that words and data are the two most powerful tools to change the world.</p>
-  <p>My daily work revolves around writing code, solving technical challenges, and transforming raw data into actionable insight. I thrive on building data systems from scratch and optimizing existing pipelines for performance and reliability.</p>
-</section>
+  <!-- ======= Header/Left Menu Bar ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
 
-<!-- Technical Expertise Section -->
-<section id="expertise">
-  <h2>Technical Expertise</h2>
-  <ul>
-    <li>Data analysis, visualization, and machine learning</li>
-    <li>Web scraping using Scrapy and Python</li>
-    <li>ETL pipeline development and data migration</li>
-    <li>Workflow orchestration using tools like Apache Airflow</li>
-    <li>Cloud storage and deployment using GCP and related tools</li>
-  </ul>
-</section>
+      <div class="profile">
+        <img src="assets/img/jm-logo.png" alt="JM Logo" class="img-fluid rounded-circle" style="background: #163b6b; color: #fff; font-size: 48px; width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; border-radius: 50%;" onerror="this.onerror=null;this.src='';this.style.display='none';">
+        <h1 class="text-light" style="margin-top: 20px;"><a href="index.html">Jackson Moses</a></h1>
+        <div class="social-links mt-3 text-center">
+          <!-- Social links removed -->
+        </div>
+      </div>
 
-<!-- Projects Section -->
-<section id="projects">
-  <h2>Scrapy Projects</h2>
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#home" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About Me</span></a></li>
+          <!-- <li><a href="#skills" class="nav-link scrollto"><i class="bx bxl-postgresql"></i> <span>Skills</span></a></li> -->
+          <li><a href="#projects" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
+          <li><a href="#facts" class="nav-link scrollto"><i class="bx bx-certification"></i> <span>Certificates</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header>
+<!-- End Header/Left Menu Bar -->
 
-  <div class="project">
-    <h3>🕷️ Ecommerce Price Tracker</h3>
-    <p>Built a Scrapy spider to monitor price changes across Flipkart and Amazon, storing results in PostgreSQL and sending daily email alerts.</p>
-  </div>
 
-  <div class="project">
-    <h3>📈 Real Estate Data Crawler</h3>
-    <p>Crawled housing listings from 10+ real estate portals, cleaned and transformed the data into CSV for market analysis.</p>
-  </div>
+  <main id="main">
 
-  <div class="project">
-    <h3>🌐 News Aggregator</h3>
-    <p>Aggregated news headlines from multiple websites using Scrapy and published to a dashboard using Streamlit.</p>
-  </div>
 
-  <div class="project">
-    <h3>📦 End-to-End Data Pipeline</h3>
-    <p>This project demonstrates an automated data pipeline using Apache Airflow to orchestrate data flow from Kaggle to Metabase dashboards. Key components include GCP Storage, dbt for transformation, and Soda for data quality checks at every stage.</p>
-    <img src="online_retail_data_pipeline.png" alt="Data pipeline diagram">
-  </div>
-</section>
+<!-- ======= HOME Section (INTRO Page)======= -->
 
-<!-- Footer -->
-<footer>
-  <p>&copy; 2025 Jackson Moses</p>
-</footer>
+  <section id="home" class="d-flex flex-column justify-content-center align-items-center">
 
-<!-- JavaScript -->
-<script>
-  // Typewriter animation
-  const roles = ["Data Engineer", "Investor", "Researcher"];
-  const typeElement = document.getElementById("typewriter");
+    <!-- <div class="home-container" data-aos="fade-in">
+      <a href="https://dharamdudi.github.io" class="image"><img src="assets/img/profile-img2.png" width="275" height="275" alt="" /></a>
+    </div> -->
+    <div class="home-container" data-aos="fade-in">
+      <h1>Jackson Moses</h1>
+      <!-- <h2>Open to work as a</h2> -->
+      <hr class="styled-hr">
+      <p class="reduced-spacing2" style="font-size: 20px;"><span style="font-size: 20px;">Data Engineer</span> from engineering background.
+        <br> Expertise in Data Engineering & Analytics
+        <br>
+        <br> Seeking new challenges to continue growing and making an impact.
+      </p>
+      <hr class="styled-hr">
+    </div>
+    <div class="home-container" data-aos="fade-in">
+      <p class="reduced-spacing" line-height:0.5>Data Engineer</p>
+    </div>
+    <div class="home-container" data-aos="fade-in" style="margin-top: -30px;">
+      <p class="reduced-spacing"><span class="typed" data-typed-items="Data Driven,Detail-Oriented,Innovative"></span></p>
+    </div>
+  
 
-  let currentRole = 0;
-  let charIndex = 0;
-  let deleting = false;
+  </section>
+  
+<!-- END HOME Section (INTRO Page) -->
 
-  function typeEffect() {
-    const currentText = roles[currentRole];
 
-    if (!deleting) {
-      typeElement.textContent = currentText.substring(0, charIndex++);
-      if (charIndex > currentText.length) {
-        deleting = true;
-        setTimeout(typeEffect, 1500);
-        return;
-      }
-    } else {
-      typeElement.textContent = currentText.substring(0, charIndex--);
-      if (charIndex < 0) {
-        deleting = false;
-        currentRole = (currentRole + 1) % roles.length;
-      }
-    }
-    setTimeout(typeEffect, deleting ? 50 : 100);
-  }
+<!-- ======= ABOUT Section ======= -->
 
-  typeEffect();
+    <section id="about" class="about">
+      <div class="container">
 
-  // Toggle mobile menu
-  function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
-  }
-</script>
+        <div class="section-title">
+          <h2>About Me</h2>
+          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>Data Engineer</h3>
+            <p class="fst-italic">
+              I’m a Data Engineer focused on building robust, scalable, and automated data solutions to solve complex business problems. My expertise spans real-time analytics, large-scale data processing, and integrating modern data technologies into enterprise environments.
+            </p>
+            <p>
+              I believe that words and data are the two most powerful tools to change the world.
+            </p>
+            <p>
+              My daily work revolves around writing code, solving technical challenges, and transforming raw data into actionable insight. I thrive on building data systems from scratch and optimizing existing pipelines for performance and reliability.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+<!-- End ABOUT Section -->
+
+
+
+
+<!-- ======= TECHNICAL SKILLS Section ======= -->
+
+    <section id="about" class="facts">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Technical Skills</h2>
+        </div>
+
+     
+
+        <div class="row no-gutters">
+          <div class="col-lg-1 text-center" data-aos="fade-right">
+            <img src="assets/img/skills/python.svg" class="img-fluid" style="margin-bottom: 0.7em; margin-top: -0.2em;" width="34" height="34" alt="Python">
+          </div>
+          <div class="col-lg-11 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <p><span style="font-weight: 600;">Python</span>: Data Structures, OOP, NumPy, Pandas, API Integration, ETL Pipelines, Logging, Unit Testing</p>
+          </div>
+          <hr style="border: 1px solid #d3cfcf; width: 100%; ">
+        </div>
+
+        <div class="row no-gutters">
+          <div class="col-lg-1 text-center" data-aos="fade-right">
+            <img src="assets/img/skills/airflow.svg" class="img-fluid" style="margin-bottom: 0.7em; margin-top: -0.2em;" width="34" height="34" alt="Airflow"></a>
+          </div>
+          <div class="col-lg-11 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <p><span style="font-weight: 600;">Airflow</span>: DAGs, Task Orchestration, Reverse ETL, ELT, XComs, Sensors, Operators</p>
+          </div>
+          <hr style="border: 1px solid #d3cfcf; width: 100%; ">
+        </div>
+
+        <div class="row no-gutters">
+          <div class="col-lg-1 text-center" data-aos="fade-right">
+            <img src="assets/img/skills/snowflake.svg" class="img-fluid" style="margin-bottom: 0.7em; margin-top: -0.2em;" width="34" height="34" alt="Snowflake"></a>
+          </div>
+          <div class="col-lg-11 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <p><span style="font-weight: 600;">Snowflake</span>: Warehousing, Query Performance Tuning, Dynamic Tables, Stages, Snowpipes, Time Travel</p>
+          </div>
+          <hr style="border: 1px solid #d3cfcf; width: 100%; ">
+        </div>
+
+     
+
+        <div class="row no-gutters">
+          <div class="col-lg-1 text-center" data-aos="fade-right">
+            <img src="assets/img/skills/postgresql.svg" class="img-fluid" style="margin-bottom: 0.7em; margin-top: -0.2em;" width="34" height="34" alt="PostgreSQL">
+          </div>
+          <div class="col-lg-11 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <p><span style="font-weight: 600;">PostgreSQL</span>: DQL, Stored Procedures, Window Functions, Data Analysis, Query Performance & Optimization</p>
+          </div>
+          <hr style="border: 1px solid #d3cfcf; width: 100%; ">
+        </div>
+
+        <div class="row no-gutters">
+          <div class="col-lg-1 text-center" data-aos="fade-right">
+            <img src="assets/img/skills/excel.svg" class="img-fluid" style="margin-bottom: 0.7em; margin-top: -0.2em;" width="34" height="34" alt="MS-Excel">
+          </div>
+          <div class="col-lg-11 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <p><span style="font-weight: 600;">Excel</span>: Pivot Tables, Power Query, Visualization, Forecasting, Statistical Analysis, and Dashboards</p>
+          </div>
+          <hr style="border: 1px solid #d3cfcf; width: 100%; ">
+        </div>
+
+        <div class="row no-gutters">
+          <div class="col-lg-1" data-aos="fade-right"></div>
+          <div class="col-lg-11" data-aos="fade-left">
+            <img src="assets/img/skills/docker.svg" style="margin-right: 1em;" title="Docker" width="34px" height="34px" alt="Docker">
+            <img src="assets/img/skills/aws.svg" style="margin-right: 1em;" title="AWS" width="34px" height="34px" alt="AWS">
+            <img src="assets/img/skills/github-actions.svg" style="margin-right: 1em;" title="GitHub Actions" width="34px" height="34px" alt="GitHub Actions">
+            <img src="assets/img/skills/figma.svg" style="margin-right: 1em;" title="Figma" width="34px" height="34px" alt="Figma">
+            <img src="assets/img/skills/git.svg" style="margin-right: 1em;" title="Git" width="34" height="34" alt="Git">
+            <img src="assets/img/skills/elk.svg" style="margin-right: 1em;" title="Elasticseaerch, Kibana" width="34" height="38px" alt="ELK">
+            <img src="assets/img/skills/vscode.svg" style="margin-right: 1em;" title="Visual Studio Code Editor"  width="34" height="34" alt="VSCode">
+            <img src="assets/img/skills/jira.svg" style="margin-right: 1em;" title="Jira"  width="34" height="34" alt="Jira">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End SKILLS Section -->
+
+
+<!-- ======= PROJECTS Section ======= -->
+    <section id="projects" class="projects section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Projects</h2>
+          <p>No projects to display at this time.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="projects-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-tab">Tableau</li>
+              <li data-filter=".filter-py">Python</li>
+              <li data-filter=".filter-sql">SQL</li>
+              <li data-filter=".filter-excel">Excel</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row projects-container rounded-lg" data-aos="fade-up" data-aos-delay="100">
+
+          <!-- Projects will be added soon -->
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- End PROJECTS Section -->
+
+
+
+
+    
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" style="margin-bottom: -50px;">
+
+        <div class="section-title">
+          <h2>Get In Touch</h2>
+          <p>Contact details are not available at this time.</p>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+          <div class="col-lg-12 d-flex align-items-stretch">
+            <div class="info" style="width:100%;text-align:center;">
+              <span style="font-size: 2em; color: #163b6b; font-weight: bold;">JM</span>
+              <p style="margin-top: 1em;">You can reach out once contact details are available.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Contact Section -->
+
+    <div class="thank-you-footer section-bg-img" style="margin-top: -50px;">
+      <p>Thank you for visiting my portfolio. Appreciate your time and interest.</p>
+      <!-- <div class="row no-gutters">
+        <div class="col-lg-12" style="text-align: center;">
+          <div class="thank-you-block">
+            Adapted and Maintaned by: <a href="https://linkedin.com/in/dharamdudi" target="_blank" style="text-decoration: underline;">Jackson Moses</a>
+          </div>
+          <div class="thank-you-block">
+            Original Design: <a href="https://bootstrapmade.com/" target="_blank" style="text-decoration: underline;">BootstrapeMade</a>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; 2025 <strong><span>Jackson Moses</span></strong>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
