@@ -30,14 +30,24 @@
     .project {
       background: white;
       padding: 1rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       border-left: 5px solid #2c3e50;
+    }
+    img {
+      max-width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-top: 10px;
     }
     footer {
       text-align: center;
       padding: 1rem;
       background: #ddd;
       margin-top: 2rem;
+    }
+    a {
+      color: #2c3e50;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -70,6 +80,13 @@
     <h3>🌐 News Aggregator</h3>
     <p>Aggregated news headlines from multiple websites using Scrapy and published to a dashboard using Streamlit.</p>
   </div>
+
+  <div class="project">
+    <h3>📦 End-to-End Data Pipeline</h3>
+    <p>This project demonstrates an automated data pipeline using Apache Airflow to orchestrate data flow from Kaggle to Metabase dashboards. Key components include GCP Storage, dbt for transformation, and Soda for data quality checks at every stage.</p>
+    <img src="online_retail_data_pipeline.png" alt="Data pipeline diagram">
+  </div>
+
 </section>
 
 <footer>
