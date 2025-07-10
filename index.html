@@ -5,76 +5,198 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jackson Moses | Data Engineer</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    :root {
+      --dark-bg: rgba(26, 37, 47, 0.95);
+      --primary: #2c3e50;
+      --white: #fff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body, html {
       margin: 0;
       padding: 0;
-      background: url('background.avif') no-repeat center center fixed;
-      background-size: cover;
-      color: #333;
+      font-family: Arial, sans-serif;
+      color: var(--white);
+      background-color: #111;
     }
-    header {
-      background-color: rgba(44, 62, 80, 0.9);
-      color: white;
-      padding: 2rem;
-      text-align: center;
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--dark-bg);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2.5rem;
+      z-index: 1000;
     }
-    nav {
-      background: rgba(26, 37, 47, 0.9);
-      text-align: center;
-      padding: 0.5rem;
-    }
-    nav a {
-      color: white;
-      margin: 0 1rem;
+
+    .navbar a.logo {
+      font-size: 1.5rem;
+      color: var(--white);
       text-decoration: none;
       font-weight: bold;
     }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: var(--dark-bg);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        text-align: right;
+        padding: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    .hero {
+      height: 100vh;
+      background: url('background.avif') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-top: 4rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .typing {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      min-height: 2rem;
+      font-weight: bold;
+    }
+
     section {
       max-width: 900px;
       margin: auto;
-      padding: 2rem;
-      background-color: rgba(255, 255, 255, 0.9);
+      padding: 5rem 2rem 3rem;
+      background-color: rgba(255, 255, 255, 0.95);
+      color: #333;
       border-radius: 10px;
     }
+
     h2 {
-      border-bottom: 2px solid #2c3e50;
+      border-bottom: 2px solid var(--primary);
       padding-bottom: 0.5rem;
     }
+
     .project {
       background: white;
       padding: 1rem;
       margin-bottom: 1.5rem;
-      border-left: 5px solid #2c3e50;
+      border-left: 5px solid var(--primary);
       border-radius: 8px;
     }
+
     img {
       max-width: 100%;
       border: 1px solid #ccc;
       border-radius: 8px;
       margin-top: 10px;
     }
+
     footer {
       text-align: center;
       padding: 1rem;
-      background: rgba(221, 221, 221, 0.9);
-      margin-top: 2rem;
+      background: var(--dark-bg);
+      color: #eee;
     }
   </style>
 </head>
 <body>
 
-<header>
+<!-- Navbar -->
+<div class="navbar">
+  <a href="#home" class="logo">Jackson Moses</a>
+  <div class="nav-links" id="navLinks">
+    <a href="#about">About Me</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#projects">Projects</a>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<!-- Hero Section -->
+<div class="hero" id="home">
   <h1>Jackson Moses</h1>
-  <p>Data Engineer | Python, Scrapy, ETL, APIs</p>
-</header>
+  <div class="typing" id="typewriter"></div>
+</div>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About Me</a>
-</nav>
+<!-- About Me Section -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>I’m a Data Engineer focused on building robust, scalable, and automated data solutions to solve complex business problems. My expertise spans real-time analytics, large-scale data processing, and integrating modern data technologies into enterprise environments.</p>
+  <p>I believe that words and data are the two most powerful tools to change the world.</p>
+  <p>My daily work revolves around writing code, solving technical challenges, and transforming raw data into actionable insight. I thrive on building data systems from scratch and optimizing existing pipelines for performance and reliability.</p>
+</section>
 
-<section>
+<!-- Technical Expertise Section -->
+<section id="expertise">
+  <h2>Technical Expertise</h2>
+  <ul>
+    <li>Data analysis, visualization, and machine learning</li>
+    <li>Web scraping using Scrapy and Python</li>
+    <li>ETL pipeline development and data migration</li>
+    <li>Workflow orchestration using tools like Apache Airflow</li>
+    <li>Cloud storage and deployment using GCP and related tools</li>
+  </ul>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
   <h2>Scrapy Projects</h2>
 
   <div class="project">
@@ -97,12 +219,50 @@
     <p>This project demonstrates an automated data pipeline using Apache Airflow to orchestrate data flow from Kaggle to Metabase dashboards. Key components include GCP Storage, dbt for transformation, and Soda for data quality checks at every stage.</p>
     <img src="online_retail_data_pipeline.png" alt="Data pipeline diagram">
   </div>
-
 </section>
 
+<!-- Footer -->
 <footer>
   <p>&copy; 2025 Jackson Moses</p>
 </footer>
+
+<!-- JavaScript -->
+<script>
+  // Typewriter animation
+  const roles = ["Data Engineer", "Investor", "Researcher"];
+  const typeElement = document.getElementById("typewriter");
+
+  let currentRole = 0;
+  let charIndex = 0;
+  let deleting = false;
+
+  function typeEffect() {
+    const currentText = roles[currentRole];
+
+    if (!deleting) {
+      typeElement.textContent = currentText.substring(0, charIndex++);
+      if (charIndex > currentText.length) {
+        deleting = true;
+        setTimeout(typeEffect, 1500);
+        return;
+      }
+    } else {
+      typeElement.textContent = currentText.substring(0, charIndex--);
+      if (charIndex < 0) {
+        deleting = false;
+        currentRole = (currentRole + 1) % roles.length;
+      }
+    }
+    setTimeout(typeEffect, deleting ? 50 : 100);
+  }
+
+  typeEffect();
+
+  // Toggle mobile menu
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+</script>
 
 </body>
 </html>
